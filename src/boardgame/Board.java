@@ -30,4 +30,13 @@ public class Board {
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
 	}
+	
+	/*
+	 * atribui à matriz pieces (declarada na classe Board e instanciada no
+	 * construtor) na posição dada, a piece informada. Atualiza a posição.
+	 */
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position;
+	}
 }
